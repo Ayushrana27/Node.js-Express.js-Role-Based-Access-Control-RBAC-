@@ -1,1 +1,10 @@
 Authorization: Bearer <your_token>
+
+
+| Route                | Allowed Roles          | Expected Output              |
+| -------------------- | ---------------------- | ---------------------------- |
+| `GET /api/admin`     | Admin                  | ✅ Success                    |
+| `GET /api/moderator` | Admin, Moderator       | ✅ Success                    |
+| `GET /api/user`      | Admin, Moderator, User | ✅ Success                    |
+| Invalid token        | —                      | ❌ “Invalid or expired token” |
+| Unauthorized role    | —                      | ❌ “Access Denied”            |
