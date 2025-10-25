@@ -1,0 +1,8 @@
+role-based-access/
+│
+├── server.js
+├── routes/
+│   └── protectedRoutes.js
+├── middleware/
+│   └── authMiddleware.js
+└── package.json
